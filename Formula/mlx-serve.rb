@@ -1,6 +1,6 @@
 # Generated from dist/homebrew/mlx-serve.rb.tmpl — do not edit the published
-# formula by hand. Placeholders: 0.1.0-rc6 (0.1.0-rc5), v0.1.0-rc6 (v0.1.0-rc5),
-# 65468ee5b7a7720afdf70e4d78c91391b8766158df1ce29bb3710a619c91481b (tarball digest). Filled by `just tap-formula` locally or by the
+# formula by hand. Placeholders: 0.1.0-rc7 (0.1.0-rc5), v0.1.0-rc7 (v0.1.0-rc5),
+# af64937c9eabd0afb95a86373254f5a05b7f1da85734e211bf2178661c04c83b (tarball digest). Filled by `just tap-formula` locally or by the
 # release-macos workflow's tap step in CI.
 #
 # This is a BINARY formula: the tarball is the signed + notarized arm64 build
@@ -12,9 +12,9 @@
 class MlxServe < Formula
   desc "OpenAI-compatible continuous-batching server for MLX models (no Python)"
   homepage "https://github.com/yannick/mlx-serve"
-  version "0.1.0-rc6"
-  url "https://github.com/yannick/mlx-serve/releases/download/v0.1.0-rc6/mlx-serve-v0.1.0-rc6-macos-arm64.tar.gz"
-  sha256 "65468ee5b7a7720afdf70e4d78c91391b8766158df1ce29bb3710a619c91481b"
+  version "0.1.0-rc7"
+  url "https://github.com/yannick/mlx-serve/releases/download/v0.1.0-rc7/mlx-serve-v0.1.0-rc7-macos-arm64.tar.gz"
+  sha256 "af64937c9eabd0afb95a86373254f5a05b7f1da85734e211bf2178661c04c83b"
 
   depends_on :macos
   depends_on arch: :arm64
