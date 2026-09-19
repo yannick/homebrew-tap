@@ -6,9 +6,9 @@
 class YsearchDemo < Formula
   desc "Query the public YoloSearch FineWeb benchmark corpus from your terminal"
   homepage "https://yolosearch.teixos.net"
-  url "https://git.teixos.net/api/packages/yannick/generic/ysearch-demo-release/v0.1.0-2-gcada286/ysearch-demo-v0.1.0-2-gcada286-macos-universal.tar.gz"
-  version "0.1.0-2-gcada286"
-  sha256 "4706806200474beccf753940caea52026e5ad349276d69fbacb28cbe45b2f8fa"
+  url "https://git.teixos.net/api/packages/yannick/generic/ysearch-demo-release/v0.1.0-6-g8d35971/ysearch-demo-v0.1.0-6-g8d35971-macos-universal.tar.gz"
+  version "0.1.0-6-g8d35971"
+  sha256 "9e93e2d307e3ec290f00abe29febd679113b63989e3f0779be84a4ac89f7c7ea"
 
   depends_on :macos
 
