@@ -12,6 +12,18 @@ class YsearchDemo < Formula
 
   depends_on :macos
 
+  # Apple's container runtime serves the demo corpora. It runs only on Apple
+  # silicon with macOS 26 or newer, so it is required there and nowhere else:
+  # on an Intel Mac or an older macOS, ysearch-demo still installs and queries
+  # a server you name with --address.
+  on_macos do
+    on_arm do
+      on_tahoe :or_newer do
+        depends_on "container"
+      end
+    end
+  end
+
   def install
     bin.install "ysearch-demo"
   end
@@ -20,9 +32,11 @@ class YsearchDemo < Formula
     # Single-quoted heredoc: Ruby must not read \f as a form feed.
     <<~'EOS'
       ysearch-demo is a client: it holds no search engine. It queries the
-      yolosearch-demo container, which needs Apple's container runtime:
+      yolosearch-demo container, which runs on Apple's container runtime.
+      On an Apple silicon Mac with macOS 26 or newer, Homebrew installed the
+      runtime along with ysearch-demo. Start it once:
 
-        brew install --cask container
+        container system start
 
       Then just run it. It offers to start the container the first time:
 
